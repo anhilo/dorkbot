@@ -73,6 +73,6 @@ def checkall(url):
 
 def run(args, target):
     parsed_result=urlparse(target)
-    checkall(parsed_result['scheme']+'://'+ parsed_result['netloc'] +'/' + parsed_result['path'].split('/')[1])
+    checkall(parsed_result[0]+'://'+ parsed_result[1] +'/' + parsed_result[2].split('/')[1])
     vulns = []
     return vulns
